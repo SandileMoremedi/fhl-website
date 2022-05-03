@@ -1,0 +1,26 @@
+@import "../utils/variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.2rem;
+  width: 100vw;
+  background-color: $Custom-White;
+  color: $Dark-Blue;
+  overflow-x: hidden;
+}
+svg {
+  color: $Soft-Red;
+}
+.container {
+  min-height: 100vh;
+  // padding: 0 30px;
+}

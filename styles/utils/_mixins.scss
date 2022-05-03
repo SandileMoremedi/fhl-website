@@ -1,0 +1,15 @@
+@import "../utils/variables";
+@mixin buttons {
+  display: flex;
+  padding: 10px 15px;
+  border: 2px solid $Dark-Blue;
+  text-decoration: none;
+  color: white;
+  margin-top: 30px;
+  width: fit-content;
+  line-height: 1.2;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
