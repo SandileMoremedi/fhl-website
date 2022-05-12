@@ -15,6 +15,7 @@
     .right {
       display: flex;
       flex-direction: column;
+
       input {
         padding: 10px;
         font-size: 1.3rem;
@@ -45,6 +46,17 @@
       flex-direction: column;
       .top {
         flex-direction: column !important;
+        .left,
+        .right {
+          width: 80vw;
+          margin: 0 auto;
+          max-width: 400px;
+        }
+      }
+      .bottom textarea {
+        width: 80vw;
+        margin: 0 auto;
+        max-width: 400px;
       }
     }
   }
