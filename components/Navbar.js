@@ -23,45 +23,26 @@ function Navbar() {
           <span className="bar"></span>
         </div>
         <ul className={nav ? "ul open" : "ul closed "}>
-          <li>
-            <Link
-              href="/"
-              onClick={() => {
-                setNav(!nav);
-              }}
-            >
-              Home
-            </Link>
+          <li
+            onClick={() => {
+              setNav(!nav);
+            }}
+          >
+            <Link href="/">Home</Link>
           </li>
-          <li>
-            <Link
-              href="/about"
-              onClick={() => {
-                setNav(!nav);
-              }}
-            >
-              About
-            </Link>
+          <li
+            onClick={() => {
+              setNav(!nav);
+            }}
+          >
+            <Link href="/about">About</Link>
           </li>
-          <li>
-            <Link
-              href="/"
-              onClick={() => {
-                setNav(!nav);
-              }}
-            >
-              Support
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/"
-              onClick={() => {
-                setNav(!nav);
-              }}
-            >
-              Contact
-            </Link>
+          <li
+            onClick={() => {
+              setNav(!nav);
+            }}
+          >
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
       </div>

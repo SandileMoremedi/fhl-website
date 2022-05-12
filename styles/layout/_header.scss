@@ -1,26 +1,36 @@
 @import "../utils/mixins";
 @import "../utils/variables";
 header {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
+  height: 60%;
   flex-direction: column;
-  width: 100vw;
   align-items: center;
 
   .intro {
-    max-width: 1000px;
     display: flex;
     justify-content: space-between;
     gap: 20px;
     margin: 0 auto;
     margin-top: 30px;
     min-height: 70vh;
-
+    padding: 0 50px;
+    width: 100%;
     .intro-content,
-    .intro-image {
+    .intro-images {
       flex: 1;
     }
+
     .intro-content {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      .image-top {
+        padding: 20px;
+      }
       h1 {
         font-size: 3rem;
         margin-bottom: 20px;
@@ -31,18 +41,10 @@ header {
       }
       a {
         @include buttons;
-        background-color: $Dark-Blue;
+        background-color: $Soft-Red-Two;
         color: $Custom-White;
         font-size: 1.3rem;
-        &:hover {
-          background-color: $Custom-White;
-          color: $Dark-Blue;
-        }
       }
-    }
-    .intro-image {
-      display: flex;
-      justify-content: flex-end;
     }
   }
 }
@@ -53,7 +55,7 @@ header {
     // padding: 0 30px;
 
     .intro-content,
-    .intro-image {
+    .intro-images {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -61,6 +63,29 @@ header {
       p {
         text-align: center;
       }
+    }
+
+    .intro-images {
+      position: relative;
+      .image-top {
+        position: relative;
+        height: 300px;
+        width: 90vw;
+      }
+    }
+  }
+}
+@media (min-width: 701px) {
+  .intro-images {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-between;
+    position: relative;
+    .image-top,
+    .image-bottom {
+      width: 350px;
+      height: 300px;
     }
   }
 }

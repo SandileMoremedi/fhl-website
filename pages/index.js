@@ -4,8 +4,6 @@ import Link from "next/link";
 import SecondIntro from "../components/Second-Intro";
 import Introduction from "../components/Introduction";
 import { motion } from "framer-motion";
-import Navbar from "../components/Navbar";
-import About from "../components/About";
 
 export default function Home({ variants }) {
   const container = {
@@ -36,7 +34,6 @@ export default function Home({ variants }) {
       <div className="container">
         <div className="content">
           <header role="banner">
-            <Navbar />
             <motion.div
               variants={container}
               initial="hidden"
@@ -45,7 +42,7 @@ export default function Home({ variants }) {
             >
               <motion.div className="intro-content" variants={variants}>
                 <motion.h1 variants={items} className="intro-header">
-                  Faith&nbsp;Hope&nbsp;Love
+                  Faith Hope Love
                 </motion.h1>
                 <motion.p variants={items} className="paragraph">
                   As an organization, we believe in social illness-free society
@@ -54,24 +51,25 @@ export default function Home({ variants }) {
                   Development and Sustainability, HIV and AIDS / Drug Abuse /
                   Sex Abuse / Teenage Pregnancy.
                 </motion.p>
-                <motion.div variants={items} className="link">
-                  <Link href="#about">Read More</Link>
+                <motion.div key="first-item" variants={items} className="link">
+                  <Link href="/about">Read More</Link>
                 </motion.div>
               </motion.div>
-              <motion.div variants={items} className="intro-image">
-                <Image
-                  src="/grocery-1.jpg"
-                  width="400"
-                  height="400"
-                  alt="Bag Of Grocery Image"
-                  objectFit="cover"
-                />
+              <motion.div variants={items} className="intro-images">
+                <div className="image-top">
+                  <Image
+                    src="/logo.jpg"
+                    layout="fill"
+                    alt="Bag Of Grocery Image"
+                    objectFit="contain"
+                  />
+                </div>
               </motion.div>
             </motion.div>
           </header>
           <main role="main">
             <Introduction />
-            <About />
+            <SecondIntro />
           </main>
         </div>
       </div>
