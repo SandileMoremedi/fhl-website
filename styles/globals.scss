@@ -1,12 +1,17 @@
 // By dividing all the SCSS files it will be very easy to manage and maintain.
 @import "base/reset";
 @import "base/typography";
+
 @import "./components/navbar";
 @import "./components/introduction";
+
 @import "./layout/about";
 @import "./layout/second-intro";
 @import "./layout/header";
 @import "./layout/footer";
 @import "./layout/contact";
+@import "./layout/gallery";
+@import "./layout/admin";
+
 @import "./utils/variables";
 @import "./utils/mixins";

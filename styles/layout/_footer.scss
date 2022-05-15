@@ -21,10 +21,11 @@ footer {
 }
 
 @media (max-width: 700px) {
-  h1 {
+  footer h1 {
     text-align: center;
   }
-  footer .links {
-    display: none !important;
+  footer ul{
+    flex-direction: column;
   }
+  
 }

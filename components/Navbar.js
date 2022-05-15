@@ -8,6 +8,7 @@ function Navbar() {
       initial={{ opacity: 0, y: -50 }}
       animate={{ y: 0, opacity: 1 }}
       role="navigation"
+      aria-label="Menu"
     >
       <div className="nav">
         <h1>FHL</h1>
@@ -36,6 +37,13 @@ function Navbar() {
             }}
           >
             <Link href="/about">About</Link>
+          </li>
+          <li
+            onClick={() => {
+              setNav(!nav);
+            }}
+          >
+            <Link href="/gallery">Gallery</Link>
           </li>
           <li
             onClick={() => {
