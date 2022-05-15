@@ -8,12 +8,34 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     margin: 0 auto;
-    // max-width: 1000px;
+    max-width: 1000px;
     padding: 0 20px;
     gap: 20px;
     .galleryImages {
       position: relative;
       height: 350px;
     }
+  }
+}
+.addButton {
+  display: flex;
+  margin: 30px auto;
+  border: none;
+  background-color: $Soft-Red-Two;
+  color: $Custom-White;
+  padding: 10px 20px;
+  font-size: 1.4rem;
+}
+.submittedHeading {
+  margin: 20px auto;
+  display: flex;
+  font-size: 1.2rem;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr !important;
   }
 }

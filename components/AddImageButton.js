@@ -9,7 +9,6 @@ import { app } from "../firebase_config";
 import { useState, useEffect } from "react";
 
 function AddImageButton() {
-  const [image, setImage] = useState(null);
   const [file, setFile] = useState(null);
   const [submitted, setSubmitted] = useState(false);
 
@@ -44,6 +43,7 @@ function AddImageButton() {
       {file && (
         <button
           type="submit"
+          className="addButton"
           onClick={() => {
             submitFunction();
           }}
@@ -51,7 +51,11 @@ function AddImageButton() {
           Submit
         </button>
       )}
-      {submitted && <span className="submittedHeading">Submitted</span>}
+      {submitted && (
+        <span className="submittedHeading">
+          Submitted, Please Refresh the Page.
+        </span>
+      )}
     </>
   );
 }
