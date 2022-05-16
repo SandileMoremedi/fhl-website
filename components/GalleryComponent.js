@@ -6,7 +6,6 @@ function GalleryComponent({ data }) {
 
   useEffect(() => {
     setImages(data);
-    console.log(images);
   }, []);
   return (
     <div className="gallery">

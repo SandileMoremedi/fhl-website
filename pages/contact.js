@@ -11,12 +11,13 @@ function Contact() {
           With this we will receive your message in our email and please expect
           a response as soon as possible.
         </p>
-        <form action="" method="post">
+        <form action="https://formsubmit.co/fhl.npo@gmail.com" method="post">
           <div className="top">
             <div className="left">
               <label htmlFor="name">Name</label>
               <input
                 type="text"
+                name="Name"
                 placeholder="Enter Your Name"
                 required={true}
               />
@@ -26,6 +27,7 @@ function Contact() {
               <input
                 type="email"
                 id="email"
+                name="Email"
                 placeholder="Enter Your Email"
                 required={true}
               />
@@ -35,6 +37,7 @@ function Contact() {
             <label htmlFor="comment">Please Enter Your Comment</label>
             <textarea
               id="comment"
+              name="Comment"
               cols="30"
               rows="10"
               required={true}
