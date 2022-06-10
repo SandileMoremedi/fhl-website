@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import SecondIntro from "../components/Second-Intro";
 import Introduction from "../components/Introduction";
+import Sponsor from "../components/Sponsor";
 import { motion } from "framer-motion";
 
 export default function Home({ variants }) {
@@ -70,6 +71,7 @@ export default function Home({ variants }) {
           <main role="main">
             <Introduction />
             <SecondIntro />
+            <Sponsor />
           </main>
         </div>
       </div>
